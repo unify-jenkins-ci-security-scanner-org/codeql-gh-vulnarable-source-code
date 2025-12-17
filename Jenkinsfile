@@ -15,6 +15,7 @@ pipeline {
         PYTHON_DIR = "${env.WORKSPACE}/python"  // Use the same Python path as first pipeline
         PYTHON_URL = "https://github.com/indygreg/python-build-standalone/releases/download/20240107/cpython-3.11.7+20240107-x86_64-unknown-linux-gnu-install_only.tar.gz"
         VENV_DIR = "${env.WORKSPACE}/venv"
+        PYTHON = '/usr/bin/python3.11'
     }
 
     stages {
@@ -32,11 +33,11 @@ pipeline {
     //         }
     //     }
 
-    stage('Install which') {
-      steps {
-        sh 'apk add which'
-      }
-  }
+  //   stage('Install which') {
+  //     steps {
+  //       sh 'apk add which'
+  //     }
+  // }
 
     stage('Ensure Python 3.11') {
       steps {
