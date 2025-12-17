@@ -32,11 +32,11 @@ pipeline {
     //         }
     //     }
 
-  //   stage('Install which') {
-  //     steps {
-  //       sh 'apt-get update && apt-get install -y which'
-  //     }
-  // }
+    stage('Install which') {
+      steps {
+        sh 'yum install -y which'
+      }
+  }
 
     stage('Ensure Python 3.11') {
       steps {
