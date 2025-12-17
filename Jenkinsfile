@@ -32,11 +32,11 @@ pipeline {
     //         }
     //     }
 
-    stage('Install which') {
-      steps {
-        sh 'apt-get update && apt-get install -y which'
-      }
-  }
+  //   stage('Install which') {
+  //     steps {
+  //       sh 'apt-get update && apt-get install -y which'
+  //     }
+  // }
 
     stage('Ensure Python 3.11') {
       steps {
@@ -81,7 +81,7 @@ pipeline {
                     export GOROOT="$GO_DIR"
                     export GOPATH="$GOPATH"
                     "$CODEQL_DIR/codeql" database create "$DB_NAME" \
-                      --language=python \
+                      --language=python3 \
                       --source-root="$SOURCE_DIR"
                 '''
             }
