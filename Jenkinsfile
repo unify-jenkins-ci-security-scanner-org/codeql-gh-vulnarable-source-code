@@ -17,7 +17,7 @@ pipeline {
         VENV_DIR = "${env.WORKSPACE}/venv"
     }
 
-    // stages {
+    stages {
     //     stage('Install Go') {
     //         steps {
     //             echo "⬇️ Installing Go..."
@@ -112,4 +112,5 @@ pipeline {
             echo "✅ Build completed"
         }
     }
+}
      
