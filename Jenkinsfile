@@ -81,7 +81,7 @@ pipeline {
                     export GOROOT="$GO_DIR"
                     export GOPATH="$GOPATH"
                     "$CODEQL_DIR/codeql" database create "$DB_NAME" \
-                      --language=python3 \
+                      --language=python \
                       --source-root="$SOURCE_DIR"
                 '''
             }
