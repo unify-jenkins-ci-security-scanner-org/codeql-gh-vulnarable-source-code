@@ -34,7 +34,7 @@ pipeline {
 
     stage('Install which') {
       steps {
-        sh 'yum install -y which'
+        sh 'apk add which'
       }
   }
 
